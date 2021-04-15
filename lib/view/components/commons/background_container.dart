@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
+import 'package:get/get.dart';
 
 class BackgroundContainer extends StatelessWidget {
 
   final Widget child;
   final double height;
-  final double padding;
 
   const BackgroundContainer({
     required this.height,
-    this.padding = 30,
     required this.child,
   });
 
@@ -17,11 +16,12 @@ class BackgroundContainer extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: padding),
+      padding: EdgeInsets.symmetric(horizontal: context.isPhone && context.isPortrait
+          ? kWidth * 0.1
+          : kWidth * 0.5),
       height: height,
-      width: double.infinity,
       decoration: BoxDecoration(
-          color: kLightPrimaryColor,
+          color: Colors.white,
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(kInch * 0.04),
             bottomRight: Radius.circular(kInch * 0.04),

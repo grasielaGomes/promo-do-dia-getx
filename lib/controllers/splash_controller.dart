@@ -1,8 +1,9 @@
 import 'package:flutter/services.dart';
-import 'package:promo_do_dia_getx/view/pages/sign_in.dart';
-import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:rive/rive.dart';
 import 'package:get/get.dart';
+
+import 'package:promo_do_dia_getx/view/pages/sign_in.dart';
+import 'package:promo_do_dia_getx/view/utils/constants.dart';
 
 class SplashController extends GetxController {
 
@@ -20,8 +21,8 @@ class SplashController extends GetxController {
         riveArtboard = artboard;
       },
     );
-    Future.delayed(Duration(milliseconds: 1800), (){
-      Get.to(() => SignIn(), transition: Transition.upToDown);
+    Future.delayed(const Duration(milliseconds: 1800), (){
+      Get.off(() => SignIn(), transition: Transition.upToDown);
     });
   }
 

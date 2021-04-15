@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/view/components/commons/circle_button.dart';
 import 'package:promo_do_dia_getx/view/components/commons/instruction_text.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
-import 'package:get/get.dart';
 
 
 class SignInAccounts extends StatelessWidget {

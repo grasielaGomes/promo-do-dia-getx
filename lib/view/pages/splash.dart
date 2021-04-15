@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:promo_do_dia_getx/controller/splash_controller.dart';
+import 'package:promo_do_dia_getx/controllers/splash_controller.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:rive/rive.dart';
 
@@ -11,6 +11,7 @@ class Splash extends StatelessWidget {
         init: SplashController(),
         builder: (_) {
       return Scaffold(
+        backgroundColor: kLightPrimaryColor,
         body: Center(
           child: SizedBox(
             height: kInch * 0.35,
