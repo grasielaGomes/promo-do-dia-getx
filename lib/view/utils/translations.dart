@@ -16,7 +16,8 @@ class Messages extends Translations {
       'sign_up': 'Sign Up',
       'name': 'Full name',
       'same_password': 'Repeat your password',
-      'account_exists': 'Sign In'
+      'account_exists': 'Sign In',
+      'tap_email': 'Please, tap your email',
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -31,7 +32,8 @@ class Messages extends Translations {
       'sign_up': 'Criar conta',
       'name': 'Nome completo',
       'same_password': 'Repita a senha',
-      'account_exists': 'Já tenho uma conta'
+      'account_exists': 'Já tenho uma conta',
+      'tap_email': 'Digite seu e-mail',
     }
   };
 }
