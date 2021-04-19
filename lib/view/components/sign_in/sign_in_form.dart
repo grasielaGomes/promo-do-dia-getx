@@ -26,7 +26,7 @@ class SignInForm extends StatelessWidget {
                   controller: mailController,
                   validator: (value){},
                 ),
-                SizedBox(height: kHeight * 0.02),
+                SizedBox(height: _.responsive.heightPercent(2)),
                 InputField(
                   icon: Icons.lock_outline_rounded,
                   label: 'password'.tr,
@@ -35,11 +35,11 @@ class SignInForm extends StatelessWidget {
                   iconShowPassword: GestureDetector(
                       onTapUp: _.onTapUp,
                       onTapDown: _.onTapDown,
-                      child: Icon(Icons.remove_red_eye_rounded, color: kGrey, size: kInch * .025)),
+                      child: Icon(Icons.remove_red_eye_rounded, color: kGrey, size: _.responsive.inchPercent(2.5))),
                   validator: (value){},
                 ),
                 Padding(
-                    padding: EdgeInsets.symmetric(vertical: kHeight * 0.02),
+                    padding: EdgeInsets.symmetric(vertical: _.responsive.heightPercent(2)),
                     child: BodyText(
                       textAlign: TextAlign.right,
                       text: 'forgot_password'.tr,

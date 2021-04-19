@@ -19,19 +19,19 @@ class SignUp extends StatelessWidget {
               child: Column(
                 children: [
                   BackgroundContainer(
-                      height: kHeight * .9,
+                      height: _.responsive.heightPercent(90),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ImageBox(
                               imagePath: kLogo,
-                              width: kInch * .18),
-                          SizedBox(height: kHeight * .06),
+                              width: _.responsive.inchPercent(18)),
+                          SizedBox(height: _.responsive.heightPercent(6)),
                           SignUpForm()
                         ],
                       )),
                   BottomButton(
-                      height: kHeight * .1,
+                      height: _.responsive.heightPercent(10),
                       icon: Icons.account_circle_rounded,
                       text: 'sign_in'.tr,
                       onTap: () => _.goToSignIn())

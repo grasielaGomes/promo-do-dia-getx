@@ -22,23 +22,23 @@ class SignIn extends StatelessWidget {
               child: Column(
                 children: [
                   BackgroundContainer(
-                      height: kHeight * 0.9,
+                      height: _.responsive.heightPercent(90),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           SizedBox(
-                            height: kHeight * 0.03,
+                            height: _.responsive.heightPercent(3),
                           ),
                           ImageBox(
                               imagePath: kLogo,
-                              width: kInch * 0.18),
+                              width: _.responsive.inchPercent(18)),
                           SignInForm(),
                           SignInAccounts(),
                           SignInPolicy(),
                         ],
                       )),
                   BottomButton(
-                      height: kHeight * 0.1,
+                      height: _.responsive.heightPercent(10),
                       icon: Icons.add_business_rounded,
                       text: 'sign_up'.tr,
                       onTap: () => _.goToSignUp())

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:promo_do_dia_getx/view/components/commons/instruction_text.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
+import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class BottomButton extends StatelessWidget {
 
@@ -10,11 +11,13 @@ class BottomButton extends StatelessWidget {
   final double height;
 
 
-  const BottomButton({
+  BottomButton({
     required this.height,
     required this.icon,
     required this.text,
     required this.onTap});
+
+  final Responsive _responsive = Responsive();
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +29,7 @@ class BottomButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, size: kInch * 0.025, color: kLightPrimaryColor,),
+            Icon(icon, size: _responsive.inchPercent(2.5), color: kLightPrimaryColor,),
             const SizedBox(width: 8),
             InstructionText(
                 text: text,

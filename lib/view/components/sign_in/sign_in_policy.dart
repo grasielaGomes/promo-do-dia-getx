@@ -2,18 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:get/get.dart';
+import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class SignInPolicy extends StatelessWidget {
 
+  final Responsive _responsive = Responsive();
+
   @override
   Widget build(BuildContext context) {
+    final double _fontSize = _responsive.inchPercent(1.6);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text('privacy_policy1'.tr,
           style: TextStyle(
               color: kGrey,
-              fontSize: kInch * 0.016
+              fontSize: _fontSize
         ),),
         TextButton(
             onPressed: (){},
@@ -23,7 +27,7 @@ class SignInPolicy extends StatelessWidget {
             ),
             child: Text('privacy_policy2'.tr,
                 style: TextStyle(
-                    fontSize: kInch * 0.016,
+                    fontSize: _fontSize,
                     color: kPrimaryColor,
                     decoration: TextDecoration.underline)))
       ],

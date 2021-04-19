@@ -1,8 +1,7 @@
-import 'dart:math' as math;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 //COLORS
 const Color kDeepPrimaryColor = Color(0xFF902D26);
@@ -18,11 +17,6 @@ const Color kLightGrey = Color(0xFFD9D5D5);
 //ASSETS
 const String kLogoSplash = 'assets/images/logo-splash.riv';
 const String kLogo = 'assets/images/logo.png';
-
-//RESPONSIVE
-final kInch = math.sqrt(math.pow(Get.width, 2) + math.pow(Get.height, 2));
-final kWidth = Get.width;
-final kHeight = Get.height;
 
 //RADIUS
 const double kInputRadius = 8;
