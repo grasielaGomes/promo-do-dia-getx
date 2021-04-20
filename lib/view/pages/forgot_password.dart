@@ -1,35 +1,54 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:promo_do_dia_getx/controllers/forgot_password_controller.dart';
 import 'package:promo_do_dia_getx/view/components/commons/background_container.dart';
+import 'package:promo_do_dia_getx/view/components/commons/body_text.dart';
+import 'package:promo_do_dia_getx/view/components/commons/content_container.dart';
 import 'package:promo_do_dia_getx/view/components/commons/image_box.dart';
-import 'package:promo_do_dia_getx/view/components/commons/instruction_text.dart';
+import 'package:promo_do_dia_getx/view/components/commons/return_button.dart';
+import 'package:promo_do_dia_getx/view/components/forgot_password/forgot_password_form.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
-import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class ForgotPassword extends StatelessWidget {
-  final Responsive _responsive = Responsive();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        physics: const ClampingScrollPhysics(),
-        child: Column(
-          children: [
-            BackgroundContainer(
-                height: _responsive.heightPercent(70),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ImageBox(
-                        imagePath: kLogo,
-                        width: _responsive.inchPercent(18)),
-                    SizedBox(height: _responsive.heightPercent(60)),
-                    InstructionText(text: 'tap_email'.tr)
-                  ],
-                )),
-          ],
+    return GetBuilder<ForgotPasswordController>(
+      init: ForgotPasswordController(),
+        builder: (_) {
+      return Scaffold(
+        body: SingleChildScrollView(
+          physics: const ClampingScrollPhysics(),
+          child: Stack(
+            children: [
+              BackgroundContainer(
+                  height: _.responsive.heightPercent(70)),
+              ContentContainer(
+                child: SafeArea(
+                  bottom: false,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Align(
+                          alignment: Alignment.topLeft,
+                          child: ReturnButton()),
+                      ImageBox(
+                          imagePath: kLogo,
+                          width: _.responsive.inchPercent(18)),
+                      ForgotPasswordForm(),
+                      Container(
+                        alignment: Alignment.center,
+                        height: _.responsive.heightPercent(28),
+                        child: BodyText(text: 'forgot_password_instruction'.tr, color: kLightPrimaryColor,),
+                      )
+                    ],
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:promo_do_dia_getx/view/pages/forgot_password.dart';
 import 'package:promo_do_dia_getx/view/pages/products.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_in.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_up.dart';
@@ -27,10 +28,11 @@ class PromoDoDia extends StatelessWidget {
       ),
       initialRoute: '/splash',
       getPages: [
-        GetPage(name: '/splash', page: () => Splash()),
-        GetPage(name: '/sign-in', page: () => SignIn()),
-        GetPage(name: '/sign-up', page: () => SignUp()),
-        GetPage(name: '/products', page: () => Products()),
+        GetPage(name: '/splash', page: () => Splash(), transition: Transition.fadeIn),
+        GetPage(name: '/sign-in', page: () => SignIn(), transition: Transition.fade),
+        GetPage(name: '/sign-up', page: () => SignUp(), transition: Transition.fade),
+        GetPage(name: '/forgot-password', page: () => ForgotPassword(), transition: Transition.fade),
+        GetPage(name: '/products', page: () => Products(), transition: Transition.fadeIn),
       ],
     );
   }

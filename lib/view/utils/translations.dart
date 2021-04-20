@@ -18,6 +18,8 @@ class Messages extends Translations {
       'same_password': 'Repeat your password',
       'account_exists': 'Sign In',
       'tap_email': 'Please, tap your email',
+      'forgot_password_instruction': 'We will send you an email with a link to change your password.',
+      'send': 'send'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -34,6 +36,8 @@ class Messages extends Translations {
       'same_password': 'Repita a senha',
       'account_exists': 'Já tenho uma conta',
       'tap_email': 'Digite seu e-mail',
+      'forgot_password_instruction': 'Você receberá um e-mail com um link para redefinir a sua senha.',
+      'send': 'enviar'
     }
   };
 }

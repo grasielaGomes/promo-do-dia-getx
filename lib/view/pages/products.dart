@@ -15,10 +15,7 @@ class Products extends StatelessWidget {
             body: Column(
               children: [
                 BackgroundContainer(
-                    height: _.responsive.heightPercent(90),
-                    child: Column(
-                      children: [],
-                    )),
+                    height: _.responsive.heightPercent(90)),
               ],
             ),
           );

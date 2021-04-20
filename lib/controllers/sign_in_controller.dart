@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/view/utils/responsive.dart';
@@ -5,7 +6,9 @@ import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 class SignInController extends GetxController {
 
   bool obscure = true;
-  Responsive responsive = Responsive();
+  final Responsive responsive = Responsive();
+  final TextEditingController mailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
 
   void onTapDown(TapDownDetails details) {
     obscure = false;
@@ -19,6 +22,10 @@ class SignInController extends GetxController {
 
   void goToSignUp (){
     Get.offNamed('/sign-up');
+  }
+
+  void goForgotPassword (){
+    Get.toNamed('/forgot-password');
   }
 
   void goToProducts (){

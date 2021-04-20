@@ -8,9 +8,6 @@ import 'package:promo_do_dia_getx/view/utils/constants.dart';
 
 class SignInForm extends StatelessWidget {
 
-  final TextEditingController mailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return GetBuilder<SignInController>(
@@ -23,14 +20,14 @@ class SignInForm extends StatelessWidget {
                 InputField(
                   icon: Icons.alternate_email_rounded,
                   label: 'email'.tr,
-                  controller: mailController,
+                  controller: _.mailController,
                   validator: (value){},
                 ),
                 SizedBox(height: _.responsive.heightPercent(2)),
                 InputField(
                   icon: Icons.lock_outline_rounded,
                   label: 'password'.tr,
-                  controller: passwordController,
+                  controller: _.passwordController,
                   obscure: _.obscure,
                   iconShowPassword: GestureDetector(
                       onTapUp: _.onTapUp,
@@ -38,12 +35,15 @@ class SignInForm extends StatelessWidget {
                       child: Icon(Icons.remove_red_eye_rounded, color: kGrey, size: _.responsive.inchPercent(2.5))),
                   validator: (value){},
                 ),
-                Padding(
-                    padding: EdgeInsets.symmetric(vertical: _.responsive.heightPercent(2)),
-                    child: BodyText(
-                      textAlign: TextAlign.right,
-                      text: 'forgot_password'.tr,
-                    )),
+                GestureDetector(
+                  onTap: () =>_.goForgotPassword(),
+                  child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: _.responsive.heightPercent(2)),
+                      child: BodyText(
+                        textAlign: TextAlign.right,
+                        text: 'forgot_password'.tr,
+                      )),
+                ),
                 RoundedButton(
                     text: 'sign_in'.tr,
                     onTap: () => _.goToProducts()),

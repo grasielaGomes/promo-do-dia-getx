@@ -7,11 +7,6 @@ import 'package:promo_do_dia_getx/view/utils/constants.dart';
 
 class SignUpForm extends StatelessWidget {
 
-  final TextEditingController mailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController passwordController2 = TextEditingController();
-
-
   @override
   Widget build(BuildContext context) {
 
@@ -27,21 +22,21 @@ class SignUpForm extends StatelessWidget {
                 InputField(
                   icon: Icons.person_outline_rounded,
                   label: 'name'.tr,
-                  controller: mailController,
+                  controller: _.userController,
                   validator: (value){},
                 ),
                 SizedBox(height: _spaceHeight),
                 InputField(
                   icon: Icons.alternate_email_rounded,
                   label: 'email'.tr,
-                  controller: mailController,
+                  controller: _.mailController,
                   validator: (value){},
                 ),
                 SizedBox(height: _spaceHeight),
                 InputField(
                   icon: Icons.lock_outline_rounded,
                   label: 'password'.tr,
-                  controller: passwordController,
+                  controller: _.passwordController,
                   obscure: _.obscure,
                   iconShowPassword: GestureDetector(
                       onTapUp: _.onTapUp,
@@ -53,7 +48,7 @@ class SignUpForm extends StatelessWidget {
                 InputField(
                   icon: Icons.lock_outline_rounded,
                   label: 'same_password'.tr,
-                  controller: passwordController2,
+                  controller: _.passwordController2,
                   obscure: _.obscure,
                   iconShowPassword: GestureDetector(
                       onTapUp: _.onTapUp,
