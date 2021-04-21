@@ -46,7 +46,7 @@ class SignInForm extends StatelessWidget {
                 ),
                 RoundedButton(
                     text: 'sign_in'.tr,
-                    onTap: () => _.goToProducts()),
+                    onTap: () => _.goUserType()),
               ],
             ),
           );

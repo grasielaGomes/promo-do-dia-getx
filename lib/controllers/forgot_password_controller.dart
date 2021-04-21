@@ -8,4 +8,8 @@ class ForgotPasswordController extends GetxController {
   final Responsive responsive = Responsive();
   final TextEditingController mailController = TextEditingController();
 
+  void goToEmailSent (){
+    Get.offNamed('/email-sent');
+  }
+
 }

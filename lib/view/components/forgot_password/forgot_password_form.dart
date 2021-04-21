@@ -27,7 +27,7 @@ class ForgotPasswordForm extends StatelessWidget {
                 SizedBox(height: _.responsive.heightPercent(3)),
                 RoundedButton(
                     text: 'send'.tr,
-                    onTap: () {}),
+                    onTap: () => _.goToEmailSent()),
               ],
             ),
           );

@@ -28,6 +28,10 @@ class SignInController extends GetxController {
     Get.toNamed('/forgot-password');
   }
 
+  void goUserType (){
+    Get.toNamed('/user-type');
+  }
+
   void goToProducts (){
     Get.offNamed('/products');
   }

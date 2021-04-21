@@ -19,7 +19,11 @@ class Messages extends Translations {
       'account_exists': 'Sign In',
       'tap_email': 'Please, tap your email',
       'forgot_password_instruction': 'We will send you an email with a link to change your password.',
-      'send': 'send'
+      'send': 'send',
+      'email_sent': 'Email sent with success!',
+      'sign_in_like': 'Sign in like',
+      'client': 'Client',
+      'administrator': 'Administrator'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -37,7 +41,11 @@ class Messages extends Translations {
       'account_exists': 'Já tenho uma conta',
       'tap_email': 'Digite seu e-mail',
       'forgot_password_instruction': 'Você receberá um e-mail com um link para redefinir a sua senha.',
-      'send': 'enviar'
+      'send': 'enviar',
+      'email_sent': 'E-mail enviado com sucessso!',
+      'sign_in_like': 'Entrar como',
+      'client': 'Cliente',
+      'administrator': 'Administrador'
     }
   };
 }

@@ -31,7 +31,7 @@ class ForgotPassword extends StatelessWidget {
                     children: [
                       Align(
                           alignment: Alignment.topLeft,
-                          child: ReturnButton()),
+                          child: ReturnButton(onTap: () => Get.back())),
                       ImageBox(
                           imagePath: kLogo,
                           width: _.responsive.inchPercent(18)),

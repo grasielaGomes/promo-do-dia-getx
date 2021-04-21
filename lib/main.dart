@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:promo_do_dia_getx/view/pages/email_sent.dart';
 import 'package:promo_do_dia_getx/view/pages/forgot_password.dart';
 import 'package:promo_do_dia_getx/view/pages/products.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_in.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_up.dart';
 import 'package:promo_do_dia_getx/view/pages/splash.dart';
+import 'package:promo_do_dia_getx/view/pages/user_type.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:promo_do_dia_getx/view/utils/translations.dart';
 
@@ -32,6 +34,8 @@ class PromoDoDia extends StatelessWidget {
         GetPage(name: '/sign-in', page: () => SignIn(), transition: Transition.fade),
         GetPage(name: '/sign-up', page: () => SignUp(), transition: Transition.fade),
         GetPage(name: '/forgot-password', page: () => ForgotPassword(), transition: Transition.fade),
+        GetPage(name: '/email-sent', page: () => EmailSent(), transition: Transition.fade),
+        GetPage(name: '/user-type', page: () => UserType(), transition: Transition.fade),
         GetPage(name: '/products', page: () => Products(), transition: Transition.fadeIn),
       ],
     );

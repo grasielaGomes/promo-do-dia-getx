@@ -4,16 +4,16 @@ import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 
-class RoundedButton extends StatelessWidget {
+class RoundedButtonOutlined extends StatelessWidget {
   final String text;
-  final Color color;
+  final Color borderColor;
   final Color textColor;
   final VoidCallback onTap;
 
 
-  RoundedButton({
+  RoundedButtonOutlined({
     required this.text,
-    this.color = kPrimaryColor,
+    this.borderColor = kLightPrimaryColor,
     this.textColor = kLightPrimaryColor,
     required this.onTap});
 
@@ -27,15 +27,9 @@ class RoundedButton extends StatelessWidget {
         height: _responsive.inchPercent(6),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: color,
+          color: Colors.transparent,
+          border: Border.all(color: borderColor, width: 2),
           borderRadius: BorderRadius.circular(_responsive.inchPercent(3)),
-          boxShadow: const <BoxShadow> [
-            BoxShadow(
-              color: Colors.black26,
-              offset: Offset(2.0, 2.0),
-              blurRadius: 7,
-            )
-          ],
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
