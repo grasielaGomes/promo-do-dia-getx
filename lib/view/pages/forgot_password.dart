@@ -14,7 +14,7 @@ class ForgotPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ForgotPasswordController>(
-      init: ForgotPasswordController(),
+        init: ForgotPasswordController(),
         builder: (_) {
       return Scaffold(
         body: SingleChildScrollView(

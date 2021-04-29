@@ -32,7 +32,7 @@ class SignUp extends StatelessWidget {
                         BottomButton(
                             height: _.responsive.heightPercent(10),
                             icon: Icons.account_circle_rounded,
-                            text: 'sign_in'.tr,
+                            text: 'account_exists'.tr,
                             onTap: () => _.goToSignIn())
                       ],
                     ),

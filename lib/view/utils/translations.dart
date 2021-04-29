@@ -23,7 +23,14 @@ class Messages extends Translations {
       'email_sent': 'Email sent with success!',
       'sign_in_like': 'Sign in like',
       'client': 'Client',
-      'administrator': 'Administrator'
+      'administrator': 'Administrator',
+      'hi': 'Hi, ',
+      'catch_offers': 'Catch our offers today:',
+      'category_all': 'All',
+      'category_cleaning': 'Cleaning',
+      'category_personal_care': 'Personal Care',
+      'category_food': 'Food',
+      'dot':'.'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -40,12 +47,19 @@ class Messages extends Translations {
       'same_password': 'Repita a senha',
       'account_exists': 'Já tenho uma conta',
       'tap_email': 'Digite seu e-mail',
-      'forgot_password_instruction': 'Você receberá um e-mail com um link para redefinir a sua senha.',
+      'forgot_password_instruction': 'Você receberá um e-mail com um link para redefinir sua senha.',
       'send': 'enviar',
       'email_sent': 'E-mail enviado com sucessso!',
       'sign_in_like': 'Entrar como',
       'client': 'Cliente',
-      'administrator': 'Administrador'
+      'administrator': 'Administrador',
+      'hi': 'Olá, ',
+      'catch_offers': 'Aproveite nossas ofertas de hoje:',
+      'category_all': 'Tudo',
+      'category_cleaning': 'Limpeza',
+      'category_personal_care': 'Cuidados Pessoais',
+      'category_food': 'Alimentos',
+      'dot':','
     }
   };
 }

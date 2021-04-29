@@ -28,9 +28,9 @@ class BackgroundContainer extends StatelessWidget {
             ),
             boxShadow: [
               BoxShadow(
-                  offset: const Offset(0, 5),
-                  blurRadius: _radius,
-                  color: Colors.black26)
+                  offset: const Offset(0, -4),
+                  blurRadius: _radius / 2,
+                  color: Colors.black12)
             ]),
       ),
     );

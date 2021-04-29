@@ -17,6 +17,14 @@ const Color kLightGrey = Color(0xFFD9D5D5);
 //ASSETS
 const String kLogoSplash = 'assets/images/logo-splash.riv';
 const String kLogo = 'assets/images/logo.png';
+const String kImage1 = 'assets/images/image1.png';
+const String kImage2 = 'assets/images/image2.png';
+const String kImage3 = 'assets/images/image3.png';
+const String kImage4 = 'assets/images/image4.png';
+const String kImage5 = 'assets/images/image5.png';
+const String kImage6 = 'assets/images/image6.png';
+const String kImage7 = 'assets/images/image7.png';
+const String kImage8 = 'assets/images/image8.png';
 
 //RADIUS
 const double kInputRadius = 8;
