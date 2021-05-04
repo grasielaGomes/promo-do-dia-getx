@@ -18,7 +18,6 @@ class CategoryButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive();
-    final double height = responsive.heightPercent(8);
     return GestureDetector(
       onTap: onTap,
       child: Column(

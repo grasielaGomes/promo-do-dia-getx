@@ -13,6 +13,7 @@ const Color kOrange = Color(0xFFF46F16);
 const Color kYellow = Color(0xFFF9A60E);
 const Color kGrey = Color(0xFF4B4B4B);
 const Color kLightGrey = Color(0xFFD9D5D5);
+const Color kWhite = Colors.white;
 
 //ASSETS
 const String kLogoSplash = 'assets/images/logo-splash.riv';

@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/models/product_model.dart';
-import 'package:promo_do_dia_getx/view/utils/constants.dart';
+import 'package:promo_do_dia_getx/view/components/products/background_box.dart';
+import 'package:promo_do_dia_getx/view/components/products/discount_bagde.dart';
+import 'package:promo_do_dia_getx/view/components/products/product_description.dart';
+import 'package:promo_do_dia_getx/view/components/products/product_image.dart';
+import 'package:promo_do_dia_getx/view/components/products/product_price.dart';
+import 'package:promo_do_dia_getx/view/pages/product_detail.dart';
 import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class ProductCard extends StatelessWidget {
@@ -18,88 +23,46 @@ class ProductCard extends StatelessWidget {
     final String dollars = product.price.toString().split('.').first;
     final String cents = product.price.toString().split('.').last;
     final String signal = 'dot'.tr;
-    return Stack(
-      alignment: Alignment.topLeft,
-      children: [
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-              height: responsive.heightPercent(20),
-              decoration: BoxDecoration(
-                  color: kLightPrimaryColor,
-                  borderRadius: BorderRadius.circular(radius)
-              )
+    final String price = '$dollars$signal$cents';
+
+    return GestureDetector(
+      onTap: () => Get.to(() => ProductDetail(product: product)),
+      child: Stack(
+        alignment: Alignment.topLeft,
+        children: [
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: BackgroundBox(
+              radius: radius,
+              responsive: responsive),
           ),
-        ),
-        Container(
-          padding: EdgeInsets.only(bottom: padding, left: padding, right: padding),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                  height: size,
-                  width: size,
-                  child:
-                  Image.asset(product.image)),
-              Column(
-                children: [
-                  Text(product.name,
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.visible,
-                      maxLines: 2,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: responsive.inchPercent(1.8),
-                          color: kGrey)),
-                  Text(product.detail,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                          fontSize: responsive.inchPercent(1.2),
-                          color: kGrey)),
-                ],
-              ),
-              Flexible(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('R\$${product.oldPrice.toStringAsFixed(0)}', style: TextStyle(
-                        color: kGrey.withAlpha(50),
-                        fontSize: responsive.inchPercent(2),
-                        fontWeight: FontWeight.bold,
-                        decoration: TextDecoration.lineThrough)),
-                    Text('R\$$dollars$signal$cents',
-                        style: TextStyle(
-                          color: kPrimaryColor,
-                          fontSize: responsive.inchPercent(2),
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ],
+          Container(
+            padding: EdgeInsets.only(bottom: padding, left: padding, right: padding),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ProductImage(
+                    image: product.image,
+                    size: size),
+                ProductDescription(
+                    productName: product.name,
+                    productDetail: product.detail,
+                    responsive: responsive),
+                Flexible(
+                  child: ProductPrice(
+                    oldPrice: product.oldPrice.toStringAsFixed(0),
+                    price: price,
+                    responsive: responsive),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Container(
-          height: responsive.inchPercent(2.2),
-          width: responsive.inchPercent(6),
-          decoration: BoxDecoration(
-              color: kOrange,
-              borderRadius: BorderRadius.circular(radius)
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.arrow_downward_rounded,
-                size: responsive.inchPercent(1.2),
-                color: kLightPrimaryColor,),
-              Text('-${product.discount}%',
-                style: TextStyle(
-                    fontSize: responsive.inchPercent(1.2),
-                    color: kLightPrimaryColor)),
-            ],
-          ),
-        )
-      ],
+          DiscountBadge(
+            discount: product.discount.toString(),
+            responsive: responsive,
+            radius: radius)
+        ],
+      ),
     );
   }
 }

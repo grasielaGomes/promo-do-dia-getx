@@ -10,6 +10,7 @@ class ProductsController extends GetxController {
   bool isSearching = false;
   bool isSelected = false;
   String categoryLabel = '';
+  String cartQuantity = '3';
 
   List<String> categories = ['category_all'.tr, 'category_cleaning'.tr, 'category_personal_care'.tr, 'category_food'.tr, 'category_cleaning'.tr, 'category_personal_care'.tr,];
   List<ProductModel> products = [
@@ -25,6 +26,10 @@ class ProductsController extends GetxController {
 
   void goToSignIn (){
     Get.offNamed('/sign-in');
+  }
+
+  void goBack (){
+    Get.back();
   }
 
   void searching(){

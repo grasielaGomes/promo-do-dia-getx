@@ -8,7 +8,7 @@ class ContentContainer extends StatelessWidget {
 
   const ContentContainer({
     required this.child,
-    this.percent = 3
+    this.percent = 3,
   });
 
   @override

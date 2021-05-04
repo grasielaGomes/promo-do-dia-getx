@@ -19,6 +19,7 @@ class PromoDoDia extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      defaultTransition: Transition.fade,
       translations: Messages(),
       locale: Get.deviceLocale,
       fallbackLocale: const Locale('en', 'US'),
@@ -30,13 +31,13 @@ class PromoDoDia extends StatelessWidget {
       ),
       initialRoute: '/splash',
       getPages: [
-        GetPage(name: '/splash', page: () => Splash(), transition: Transition.fadeIn),
-        GetPage(name: '/sign-in', page: () => SignIn(), transition: Transition.fade),
-        GetPage(name: '/sign-up', page: () => SignUp(), transition: Transition.fade),
-        GetPage(name: '/forgot-password', page: () => ForgotPassword(), transition: Transition.fade),
-        GetPage(name: '/email-sent', page: () => EmailSent(), transition: Transition.fade),
-        GetPage(name: '/user-type', page: () => UserType(), transition: Transition.fade),
-        GetPage(name: '/products', page: () => Products(), transition: Transition.fadeIn),
+        GetPage(name: '/splash', page: () => Splash()),
+        GetPage(name: '/sign-in', page: () => SignIn()),
+        GetPage(name: '/sign-up', page: () => SignUp()),
+        GetPage(name: '/forgot-password', page: () => ForgotPassword()),
+        GetPage(name: '/email-sent', page: () => EmailSent()),
+        GetPage(name: '/user-type', page: () => UserType()),
+        GetPage(name: '/products', page: () => Products()),
       ],
     );
   }
