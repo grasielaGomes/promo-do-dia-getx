@@ -26,7 +26,7 @@ class UserType extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical:20.0),
                   child: RoundedButtonOutlined(
                       text: 'client'.tr,
-                      onTap: () => Get.offAndToNamed('/products')),
+                      onTap: () => Get.offAndToNamed('/all-pages')),
                 ),
                 RoundedButton(
                     text: 'administrator'.tr,

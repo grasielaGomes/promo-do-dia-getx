@@ -38,6 +38,7 @@ final OutlineInputBorder kEnabledBorder = OutlineInputBorder(
 
 final OutlineInputBorder kFocusedBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(kInputRadius),
+    borderSide: const BorderSide(color: kOrange)
 );
 
 final OutlineInputBorder kErrorBorder = OutlineInputBorder(

@@ -30,7 +30,8 @@ class Messages extends Translations {
       'category_cleaning': 'Cleaning',
       'category_personal_care': 'Personal Care',
       'category_food': 'Food',
-      'dot':'.'
+      'dot':'.',
+      'label_search':'What do you need?'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -59,7 +60,8 @@ class Messages extends Translations {
       'category_cleaning': 'Limpeza',
       'category_personal_care': 'Cuidados Pessoais',
       'category_food': 'Alimentos',
-      'dot':','
+      'dot':',',
+      'label_search':'Do que você precisa?'
     }
   };
 }

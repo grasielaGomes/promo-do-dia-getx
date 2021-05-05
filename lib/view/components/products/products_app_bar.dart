@@ -15,7 +15,7 @@ class ProductsAppBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: controller.responsive.heightPercent(8),),
+        SizedBox(height: controller.responsive.heightPercent(8)),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

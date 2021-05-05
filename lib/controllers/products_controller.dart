@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/models/product_model.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
@@ -10,7 +11,7 @@ class ProductsController extends GetxController {
   bool isSearching = false;
   bool isSelected = false;
   String categoryLabel = '';
-  String cartQuantity = '3';
+  TextEditingController tController = TextEditingController();
 
   List<String> categories = ['category_all'.tr, 'category_cleaning'.tr, 'category_personal_care'.tr, 'category_food'.tr, 'category_cleaning'.tr, 'category_personal_care'.tr,];
   List<ProductModel> products = [
@@ -24,6 +25,12 @@ class ProductsController extends GetxController {
     ProductModel(image: kImage8, name: 'Desodorante Feminino', detail: 'Rexona 48h - 90g', oldPrice: 30, price: 20, discount: 25),
   ];
 
+  @override
+  void onInit() {
+    categoryLabel = categories[0];
+    super.onInit();
+  }
+
   void goToSignIn (){
     Get.offNamed('/sign-in');
   }
@@ -34,6 +41,12 @@ class ProductsController extends GetxController {
 
   void searching(){
     isSearching = !isSearching;
+    update();
+  }
+
+  void stopSearching(){
+    isSearching = !isSearching;
+    tController.clear();
     update();
   }
 

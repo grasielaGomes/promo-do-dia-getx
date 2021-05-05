@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:promo_do_dia_getx/view/pages/all_pages.dart';
 import 'package:promo_do_dia_getx/view/pages/email_sent.dart';
 import 'package:promo_do_dia_getx/view/pages/forgot_password.dart';
 import 'package:promo_do_dia_getx/view/pages/products.dart';
@@ -27,7 +28,7 @@ class PromoDoDia extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: kPrimaryColor,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          accentColor: kPrimaryColor
+          accentColor: kPrimaryColor,
       ),
       initialRoute: '/splash',
       getPages: [
@@ -37,6 +38,7 @@ class PromoDoDia extends StatelessWidget {
         GetPage(name: '/forgot-password', page: () => ForgotPassword()),
         GetPage(name: '/email-sent', page: () => EmailSent()),
         GetPage(name: '/user-type', page: () => UserType()),
+        GetPage(name: '/all-pages', page: () => AllPages()),
         GetPage(name: '/products', page: () => Products()),
       ],
     );

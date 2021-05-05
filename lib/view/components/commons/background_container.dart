@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class BackgroundContainer extends StatelessWidget {
 
   final double height;
+  final Color color;
 
   BackgroundContainer({
     required this.height,
+    this.color = kWhite
   });
 
   final Responsive _responsive = Responsive();
@@ -21,7 +24,7 @@ class BackgroundContainer extends StatelessWidget {
       child: Container(
         height: height,
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: color,
             borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(_radius),
               bottomRight: Radius.circular(_radius),

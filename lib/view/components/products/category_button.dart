@@ -30,7 +30,7 @@ class CategoryButton extends StatelessWidget {
               decoration: BoxDecoration(
                 border: Border(
                     bottom: BorderSide(
-                        color: isSelected ? kPrimaryColor : Colors.white,
+                        color: isSelected ? kPrimaryColor : kWhite,
                         width: 5))
               ),
               child: Text(label,
