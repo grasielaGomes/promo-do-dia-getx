@@ -13,7 +13,7 @@ class UserType extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          BackgroundContainer(height: 0),
+          BackgroundContainer(heightPercentage: 0),
           ContentContainer(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

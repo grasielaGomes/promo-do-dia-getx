@@ -18,9 +18,7 @@ class Products extends StatelessWidget {
           backgroundColor: kLightPrimaryColor,
             body: Stack(
               children: [
-                BackgroundContainer(
-                  height: _.responsive.heightPercent(90),
-                ),
+                BackgroundContainer(heightPercentage: 90),
                 ContentContainer(
                     child: Column(
                       children: [

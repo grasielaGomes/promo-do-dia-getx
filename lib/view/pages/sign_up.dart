@@ -19,7 +19,7 @@ class SignUp extends StatelessWidget {
               physics: const ClampingScrollPhysics(),
               child: Stack(
                 children: [
-                  BackgroundContainer(height: _.responsive.heightPercent(90)),
+                  BackgroundContainer(heightPercentage: 90),
                   ContentContainer(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -30,7 +30,7 @@ class SignUp extends StatelessWidget {
                             width: _.responsive.inchPercent(18)),
                         SignUpForm(),
                         BottomButton(
-                            height: _.responsive.heightPercent(10),
+                            heightPercentage: 10,
                             icon: Icons.account_circle_rounded,
                             text: 'account_exists'.tr,
                             onTap: () => _.goToSignIn())

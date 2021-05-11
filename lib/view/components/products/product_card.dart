@@ -20,10 +20,7 @@ class ProductCard extends StatelessWidget {
     final double radius = responsive.inchPercent(1);
     final double padding = responsive.inchPercent(1.2);
     final double size = responsive.inchPercent(15);
-    final String dollars = product.price.toString().split('.').first;
-    final String cents = product.price.toString().split('.').last;
-    final String signal = 'dot'.tr;
-    final String price = '$dollars$signal$cents';
+
 
     return GestureDetector(
       onTap: () => Get.to(() => ProductDetail(product: product)),
@@ -49,18 +46,12 @@ class ProductCard extends StatelessWidget {
                     productDetail: product.detail,
                     responsive: responsive),
                 Flexible(
-                  child: ProductPrice(
-                    oldPrice: product.oldPrice.toStringAsFixed(0),
-                    price: price,
-                    responsive: responsive),
+                  child: ProductPrice.card(product: product),
                 ),
               ],
             ),
           ),
-          DiscountBadge(
-            discount: product.discount.toString(),
-            responsive: responsive,
-            radius: radius)
+          DiscountBadge.small(discount: product.discount.toString())
         ],
       ),
     );

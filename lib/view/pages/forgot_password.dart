@@ -21,8 +21,7 @@ class ForgotPassword extends StatelessWidget {
           physics: const ClampingScrollPhysics(),
           child: Stack(
             children: [
-              BackgroundContainer(
-                  height: _.responsive.heightPercent(70)),
+              BackgroundContainer(heightPercentage: 70),
               ContentContainer(
                 child: SafeArea(
                   bottom: false,

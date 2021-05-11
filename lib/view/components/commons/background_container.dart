@@ -4,11 +4,11 @@ import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class BackgroundContainer extends StatelessWidget {
 
-  final double height;
+  final double heightPercentage;
   final Color color;
 
   BackgroundContainer({
-    required this.height,
+    required this.heightPercentage,
     this.color = kWhite
   });
 
@@ -22,7 +22,7 @@ class BackgroundContainer extends StatelessWidget {
     return Hero(
       tag: 'back',
       child: Container(
-        height: height,
+        height: _responsive.heightPercent(heightPercentage),
         decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.only(

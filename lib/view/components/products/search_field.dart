@@ -24,8 +24,6 @@ class SearchField extends StatelessWidget {
                 icon: const Icon(Icons.close_rounded),
                 onPressed: () => _.stopSearching())
             ),
-
-
           ),
         )
     );

@@ -15,8 +15,7 @@ class EmailSent extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          BackgroundContainer(
-              height: responsive.heightPercent(40)),
+          BackgroundContainer(heightPercentage: 40),
           ContentContainer(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,

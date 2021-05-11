@@ -21,8 +21,8 @@ class ProductsAppBar extends StatelessWidget {
           children: [
             Row(
               children: [
-                HeadingText(text: 'hi'.tr, color: kPrimaryColor),
-                HeadingText(text: 'Grasiela 👋'),
+                HeadingText.h1(text: 'hi'.tr, color: kPrimaryColor),
+                HeadingText.h1(text: 'Grasiela 👋', color: kGrey,),
               ],
             ),
             CustomIconButton(

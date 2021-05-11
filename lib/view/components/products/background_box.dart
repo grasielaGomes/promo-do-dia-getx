@@ -17,12 +17,6 @@ class BackgroundBox extends StatelessWidget {
         decoration: BoxDecoration(
             color: kLightPrimaryColor,
             borderRadius: BorderRadius.circular(radius),
-            boxShadow: [
-              BoxShadow(
-                  offset: const Offset(0, 2),
-                  blurRadius: radius / 2,
-                  color: Colors.black12)
-            ]
         )
     );
   }

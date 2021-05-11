@@ -8,11 +8,11 @@ class BottomButton extends StatelessWidget {
   final IconData icon;
   final String text;
   final VoidCallback onTap;
-  final double height;
+  final double heightPercentage;
 
 
   BottomButton({
-    required this.height,
+    required this.heightPercentage,
     required this.icon,
     required this.text,
     required this.onTap});
@@ -25,7 +25,7 @@ class BottomButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         color: Colors.transparent,
-        height: height,
+        height: _responsive.heightPercent(heightPercentage),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

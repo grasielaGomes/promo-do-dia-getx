@@ -30,8 +30,12 @@ class Messages extends Translations {
       'category_cleaning': 'Cleaning',
       'category_personal_care': 'Personal Care',
       'category_food': 'Food',
-      'dot':'.',
-      'label_search':'What do you need?'
+      'price':'\$@dollar.@cents',
+      'label_search':'What do you need?',
+      'about':'About',
+      'stock': 'In stock: ',
+      'quantity':'How many?',
+      'add_cart':'Add to cart'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -60,8 +64,12 @@ class Messages extends Translations {
       'category_cleaning': 'Limpeza',
       'category_personal_care': 'Cuidados Pessoais',
       'category_food': 'Alimentos',
-      'dot':',',
-      'label_search':'Do que você precisa?'
+      'price':'R\$@dollar,@cents',
+      'label_search':'Do que você precisa?',
+      'about':'Descrição',
+      'stock': 'Quantidade disponível:',
+      'quantity':'Quantidade desejada',
+      'add_cart':'Adicionar ao carrinho'
     }
   };
 }

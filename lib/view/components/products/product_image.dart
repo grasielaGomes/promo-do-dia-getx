@@ -10,10 +10,12 @@ class ProductImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: size,
-        width: size,
-        child:
-        Image.asset(image));
+    return Center(
+      child: SizedBox(
+          height: size,
+          width: size,
+          child:
+          Image.asset(image)),
+    );
   }
 }

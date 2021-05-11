@@ -22,7 +22,7 @@ class SignIn extends StatelessWidget {
               physics: const ClampingScrollPhysics(),
               child: Stack(
                 children: [
-                  BackgroundContainer(height: _.responsive.heightPercent(90)),
+                  BackgroundContainer(heightPercentage: 90),
                   ContentContainer(
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +35,7 @@ class SignIn extends StatelessWidget {
                         SignInAccounts(),
                         SignInPolicy(),
                         BottomButton(
-                            height: _.responsive.heightPercent(10),
+                            heightPercentage: 10,
                             icon: Icons.add_business_rounded,
                             text: 'sign_up'.tr,
                             onTap: () => _.goToSignUp())
