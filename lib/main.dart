@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/view/pages/all_pages.dart';
 import 'package:promo_do_dia_getx/view/pages/email_sent.dart';
 import 'package:promo_do_dia_getx/view/pages/forgot_password.dart';
+import 'package:promo_do_dia_getx/view/pages/orders.dart';
 import 'package:promo_do_dia_getx/view/pages/products.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_in.dart';
 import 'package:promo_do_dia_getx/view/pages/sign_up.dart';
@@ -40,6 +41,7 @@ class PromoDoDia extends StatelessWidget {
         GetPage(name: '/user-type', page: () => UserType()),
         GetPage(name: '/all-pages', page: () => AllPages()),
         GetPage(name: '/products', page: () => Products()),
+        GetPage(name: '/orders', page: () => Orders()),
       ],
     );
   }

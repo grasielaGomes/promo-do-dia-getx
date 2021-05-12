@@ -19,20 +19,20 @@ class CustomBottomBar extends StatelessWidget {
                 children: [
                   IconButton(
                       icon: const Icon(Icons.store_outlined),
-                      color: _.pController.page == 0 || _.isHome ? kPrimaryColor : btColor,
-                      onPressed: () {}),
+                      color: _.pController.page == 0 ? kPrimaryColor : btColor,
+                      onPressed: () => _.goTo(0)),
                   IconButton(
                       icon: const Icon(Icons.receipt_outlined),
                       color: _.pController.page == 1 ? kPrimaryColor : btColor,
-                      onPressed: () {}),
+                      onPressed: () => _.goTo(1)),
                   IconButton(
                       icon: const Icon(Icons.account_circle_outlined),
                       color: _.pController.page == 2 ? kPrimaryColor : btColor,
-                      onPressed: () {}),
+                      onPressed: () => _.goTo(2)),
                   IconButton(
                       icon: const Icon(Icons.chat_bubble_outline_rounded),
                       color: _.pController.page == 3 ? kPrimaryColor : btColor,
-                      onPressed: () {}),
+                      onPressed: () => _.goTo(3)),
                   Container(
                     margin: EdgeInsets.only(
                         right: height * .08, bottom: height * .2),

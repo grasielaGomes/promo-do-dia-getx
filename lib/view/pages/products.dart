@@ -16,7 +16,7 @@ class Products extends StatelessWidget {
         init: ProductsController(),
         builder: (_) => Scaffold(
           backgroundColor: kLightPrimaryColor,
-            body: Stack(
+          body: Stack(
               children: [
                 BackgroundContainer(heightPercentage: 90),
                 ContentContainer(
@@ -32,7 +32,7 @@ class Products extends StatelessWidget {
                           child: Divider(color: kGrey.withAlpha(100)),
                         ),
                         SizedBox(
-                          height: _.isSearching ? _.responsive.heightPercent(57.5) : _.responsive.heightPercent(65.8),
+                          height: _.isSearching ? _.responsive.heightPercent(55.7) : _.responsive.heightPercent(63.9),
                           child: GridView.builder(
                             padding: EdgeInsets.only(top: _.responsive.heightPercent(2)),
                             itemCount: _.products.length,

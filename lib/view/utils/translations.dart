@@ -35,7 +35,11 @@ class Messages extends Translations {
       'about':'About',
       'stock': 'In stock: ',
       'quantity':'How many?',
-      'add_cart':'Add to cart'
+      'add_cart':'Add to cart',
+      'orders': 'Orders',
+      'account': 'My account',
+      'personal_info': 'Personal Informations',
+      'chat': 'Support'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -69,7 +73,11 @@ class Messages extends Translations {
       'about':'Descrição',
       'stock': 'Quantidade disponível:',
       'quantity':'Quantidade desejada',
-      'add_cart':'Adicionar ao carrinho'
+      'add_cart':'Adicionar ao carrinho',
+      'orders': 'Pedidos',
+      'account': 'Minha conta',
+      'personal_info': 'Informações pessoais',
+      'chat': 'Suporte'
     }
   };
 }

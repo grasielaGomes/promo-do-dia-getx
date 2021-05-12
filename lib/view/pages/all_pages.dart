@@ -3,8 +3,10 @@ import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/controllers/pages_controller.dart';
 import 'package:promo_do_dia_getx/view/components/products/cart_quantity.dart';
 import 'package:promo_do_dia_getx/view/components/commons/custom_bottom_bar.dart';
+import 'package:promo_do_dia_getx/view/pages/account.dart';
+import 'package:promo_do_dia_getx/view/pages/chat.dart';
+import 'package:promo_do_dia_getx/view/pages/orders.dart';
 import 'package:promo_do_dia_getx/view/pages/products.dart';
-import 'package:promo_do_dia_getx/view/utils/constants.dart';
 
 class AllPages extends StatelessWidget {
   @override
@@ -18,6 +20,9 @@ class AllPages extends StatelessWidget {
                 controller: _.pController,
                 children: [
                   Products(),
+                  Orders(),
+                  Account(),
+                  Chat()
                 ],
               ),
               Align(
