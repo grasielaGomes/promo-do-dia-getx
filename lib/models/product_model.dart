@@ -1,4 +1,5 @@
 class ProductModel {
+  String productId;
   String image;
   String name;
   String detail;
@@ -8,7 +9,8 @@ class ProductModel {
   int discount;
 
   ProductModel(
-      {required this.image,
+      {required this.productId,
+      required this.image,
       required this.name,
       required this.detail,
       required this.description,
@@ -18,6 +20,7 @@ class ProductModel {
 
   factory ProductModel.fromMap(Map<String, dynamic> map) {
     return ProductModel(
+      productId: map['image'] as String,
       image: map['image'] as String,
       name: map['name'] as String,
       detail: map['detail'] as String,
@@ -30,6 +33,7 @@ class ProductModel {
 
   Map<String, dynamic> toMap() {
     return {
+      'productId': productId,
       'image': image,
       'name': name,
       'detail': detail,

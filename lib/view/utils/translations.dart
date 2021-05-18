@@ -39,7 +39,10 @@ class Messages extends Translations {
       'orders': 'Orders',
       'account': 'My account',
       'personal_info': 'Personal Informations',
-      'chat': 'Support'
+      'chat': 'Support',
+      'discount': 'Discount',
+      'delivery': 'Delivery',
+      'total': 'Total'
     },
     'pt_BR': {
       'email': 'E-mail',
@@ -77,7 +80,10 @@ class Messages extends Translations {
       'orders': 'Pedidos',
       'account': 'Minha conta',
       'personal_info': 'Informações pessoais',
-      'chat': 'Suporte'
+      'chat': 'Suporte',
+      'discount': 'Desconto',
+      'delivery': 'Entrega',
+      'total': 'Total'
     }
   };
 }

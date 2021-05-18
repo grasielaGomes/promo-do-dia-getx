@@ -19,7 +19,7 @@ class CustomBottomBar extends StatelessWidget {
                 children: [
                   IconButton(
                       icon: const Icon(Icons.store_outlined),
-                      color: _.pController.page == 0 ? kPrimaryColor : btColor,
+                      color: _.pController.page == 0 || _.isHome ? kPrimaryColor : btColor,
                       onPressed: () => _.goTo(0)),
                   IconButton(
                       icon: const Icon(Icons.receipt_outlined),
