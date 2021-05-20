@@ -27,6 +27,7 @@ dependencies:
   flutter_launcher_icons: ^0.9.0
   font_awesome_flutter: ^9.0.0
   get: ^4.1.4
+  google_fonts: ^2.0.0
   grouped_list: ^4.0.0
   lint: ^1.5.3
   rive: ^0.7.2

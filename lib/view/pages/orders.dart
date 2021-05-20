@@ -5,8 +5,6 @@ import 'package:promo_do_dia_getx/view/components/commons/background_container.d
 import 'package:promo_do_dia_getx/view/components/commons/body_text.dart';
 import 'package:promo_do_dia_getx/view/components/commons/content_container.dart';
 import 'package:promo_do_dia_getx/view/components/commons/custom_app_bar.dart';
-import 'package:promo_do_dia_getx/view/components/commons/custom_icon_button.dart';
-import 'package:promo_do_dia_getx/view/components/commons/instruction_text.dart';
 import 'package:promo_do_dia_getx/view/components/orders/order_card.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
 

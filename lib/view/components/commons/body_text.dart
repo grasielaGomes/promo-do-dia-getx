@@ -19,6 +19,8 @@ class BodyText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,
+        softWrap: true,
+        overflow: TextOverflow.ellipsis,
         style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: _responsive.inchPercent(1.6),
