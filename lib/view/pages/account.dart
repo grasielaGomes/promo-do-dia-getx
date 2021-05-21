@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-import 'package:promo_do_dia_getx/controllers/orders_controller.dart';
+import 'package:promo_do_dia_getx/controllers/account_controller.dart';
 import 'package:promo_do_dia_getx/view/components/account/info_column.dart';
 import 'package:promo_do_dia_getx/view/components/account/info_header.dart';
 import 'package:promo_do_dia_getx/view/components/commons/background_container.dart';
@@ -15,8 +15,8 @@ import 'package:promo_do_dia_getx/view/utils/constants.dart';
 class Account extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<OrdersController>(
-        init: OrdersController(),
+    return GetBuilder<AccountController>(
+        init: AccountController(),
         builder: (_) => Scaffold(
           backgroundColor: kLightPrimaryColor,
           body: Stack(
@@ -29,7 +29,8 @@ class Account extends StatelessWidget {
                   Flexible(
                     child: ListView(
                       children: [
-                        InfoHeader(title: 'personal_info'.tr, onTap: (){}),
+                        InfoHeader(title: 'personal_info'.tr,
+                            onTap: () => _.goToPersonalInfo()),
                         RoundedContainer(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -40,7 +41,8 @@ class Account extends StatelessWidget {
                                 InfoColumn.phone(info: '31 991947363')
                               ],
                             )),
-                        InfoHeader(title: 'payment_info'.tr, onTap: (){}),
+                        InfoHeader(title: 'payment_info'.tr,
+                            onTap: (){}),
                         const CreditCard(
                           number: '2345 **** **** 7892',
                           name: 'grasiela g da silva',

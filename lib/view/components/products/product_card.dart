@@ -20,8 +20,6 @@ class ProductCard extends StatelessWidget {
     final double radius = responsive.inchPercent(1);
     final double padding = responsive.inchPercent(1.2);
     final double size = responsive.inchPercent(15);
-
-
     return GestureDetector(
       onTap: () => Get.to(() => ProductDetail(product: product)),
       child: Stack(
