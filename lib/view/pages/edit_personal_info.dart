@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/controllers/editions_controller.dart';
-import 'package:promo_do_dia_getx/view/components/account/info_header.dart';
 import 'package:promo_do_dia_getx/view/components/commons/background_container.dart';
 import 'package:promo_do_dia_getx/view/components/commons/bottom_button.dart';
 import 'package:promo_do_dia_getx/view/components/commons/content_container.dart';
 import 'package:promo_do_dia_getx/view/components/commons/custom_app_bar.dart';
-import 'package:promo_do_dia_getx/view/components/commons/heading_text.dart';
 import 'package:promo_do_dia_getx/view/components/commons/return_button.dart';
-import 'package:promo_do_dia_getx/view/utils/constants.dart';
+import 'package:promo_do_dia_getx/view/components/edit_personal_info/personal_info_form.dart';
 
 class EditPersonalInfo extends StatelessWidget {
   @override
@@ -27,9 +25,11 @@ class EditPersonalInfo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomAppBar(title: 'personal_info'.tr),
-                      HeadingText.h3(
-                          text: 'address'.tr,
-                          color: kGrey.withAlpha(150)),
+                      SizedBox(
+                        height: _.responsive.heightPercent(74),
+                          child: SingleChildScrollView(
+                            padding: EdgeInsets.only(top: _.responsive.heightPercent(4)),
+                              child: PersonalInfoForm())),
                       BottomButton(
                           heightPercentage: 14,
                           icon: Icons.save_rounded,

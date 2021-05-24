@@ -18,9 +18,7 @@ class ForgotPasswordForm extends StatelessWidget {
               children: [
                 InstructionText(text: 'tap_email'.tr),
                 SizedBox(height: _.responsive.heightPercent(2)),
-                InputField(
-                  icon: Icons.alternate_email_rounded,
-                  label: 'email'.tr,
+                InputField.email(
                   controller: _.mailController,
                   validator: (value){},
                 ),

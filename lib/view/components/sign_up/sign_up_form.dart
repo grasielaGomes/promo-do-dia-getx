@@ -13,50 +13,39 @@ class SignUpForm extends StatelessWidget {
     return GetBuilder<SignUpController>(
         id: 'form',
         builder: (_){
-          final double _spaceHeight = _.responsive.heightPercent(2);
           final double _iconSize = _.responsive.inchPercent(2.5);
+          final Widget _suffixIcon = Icon(Icons.remove_red_eye_rounded, color: kGrey, size: _iconSize);
           return Form(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                InputField(
-                  icon: Icons.person_outline_rounded,
-                  label: 'name'.tr,
+                InputField.user(
                   controller: _.userController,
                   validator: (value){},
                 ),
-                SizedBox(height: _spaceHeight),
-                InputField(
-                  icon: Icons.alternate_email_rounded,
-                  label: 'email'.tr,
+                InputField.email(
                   controller: _.mailController,
                   validator: (value){},
                 ),
-                SizedBox(height: _spaceHeight),
-                InputField(
-                  icon: Icons.lock_outline_rounded,
+                InputField.password(
                   label: 'password'.tr,
                   controller: _.passwordController,
-                  obscure: _.obscure,
-                  iconShowPassword: GestureDetector(
+                  suffixIcon: GestureDetector(
                       onTapUp: _.onTapUp,
                       onTapDown: _.onTapDown,
-                      child: Icon(Icons.remove_red_eye_rounded, color: kGrey, size: _iconSize)),
+                      child: _suffixIcon),
                   validator: (value){},
                 ),
-                SizedBox(height: _spaceHeight),
-                InputField(
-                  icon: Icons.lock_outline_rounded,
+                InputField.password(
                   label: 'same_password'.tr,
                   controller: _.passwordController2,
-                  obscure: _.obscure,
-                  iconShowPassword: GestureDetector(
+                  suffixIcon: GestureDetector(
                       onTapUp: _.onTapUp,
                       onTapDown: _.onTapDown,
-                      child: Icon(Icons.remove_red_eye_rounded, color: kGrey, size: _iconSize)),
+                      child: _suffixIcon),
                   validator: (value){},
                 ),
-                SizedBox(height: _spaceHeight * 2),
+                SizedBox(height: _.responsive.heightPercent(2)),
                 RoundedButton(
                     text: 'sign_up'.tr,
                     onTap: (){}),

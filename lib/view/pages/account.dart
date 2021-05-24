@@ -26,8 +26,10 @@ class Account extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   CustomAppBar(title: 'account'.tr),
-                  Flexible(
+                  SizedBox(
+                    height: _.responsive.heightPercent(78),
                     child: ListView(
+                      padding: EdgeInsets.only(top: _.responsive.heightPercent(2)),
                       children: [
                         InfoHeader(title: 'personal_info'.tr,
                             onTap: () => _.goToPersonalInfo()),
@@ -53,11 +55,20 @@ class Account extends StatelessWidget {
                             onTap: (){},
                             child: Row(
                               children: [
-                                const Icon(Icons.remove_circle_outline_rounded, color: kPrimaryColor,),
+                                const Icon(Icons.exit_to_app_rounded, color: kPrimaryColor,),
+                                SizedBox(width: _.responsive.widthPercent(2)),
+                                BodyText(text: 'Sair da conta')
+                              ],
+                        )),
+                        RoundedContainer(
+                            onTap: (){},
+                            child: Row(
+                              children: [
+                                const Icon(Icons.delete_rounded, color: kPrimaryColor,),
                                 SizedBox(width: _.responsive.widthPercent(2)),
                                 BodyText(text: 'Excluir conta')
                               ],
-                        ))
+                            )),
                       ]),
                   )
                 ],
