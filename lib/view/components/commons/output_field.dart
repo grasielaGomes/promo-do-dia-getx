@@ -5,18 +5,19 @@ import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 final Responsive _responsive = Responsive();
 
 class OutputField extends StatelessWidget {
-  final String initialValue;
+  final String? initialValue;
   final String label;
-  final Widget? suffixIcon;
+  final bool? enable;
   final FormFieldValidator<String> validator;
+  final Function(String?)? onSaved;
 
   const OutputField({
     required this.initialValue,
     required this.label,
-    this.suffixIcon,
+    this.enable,
+    this.onSaved,
     required this.validator,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +31,16 @@ class OutputField extends StatelessWidget {
         child: TextFormField(
           style: TextStyle(fontSize: _responsive.inchPercent(1.8)),
           initialValue: initialValue,
+          onSaved: onSaved,
           validator: validator,
+          autocorrect: false,
+          enabled: enable,
           decoration: InputDecoration(
             labelText: label,
             border: kEnabledBorder,
             contentPadding:
             EdgeInsets.all(_responsive.inchPercent(2)),
             labelStyle: TextStyle(fontSize: _responsive.inchPercent(1.5)),
-            suffixIcon: suffixIcon,
             ),
           ),
         ),

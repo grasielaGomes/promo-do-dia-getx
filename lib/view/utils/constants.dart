@@ -36,21 +36,3 @@ final OutlineInputBorder kEnabledBorder = OutlineInputBorder(
     borderSide: const BorderSide(color: kLightGrey)
 );
 
-final OutlineInputBorder kFocusedBorder = OutlineInputBorder(
-  borderRadius: BorderRadius.circular(kInputRadius),
-    borderSide: const BorderSide(color: kOrange)
-);
-
-final OutlineInputBorder kErrorBorder = OutlineInputBorder(
-  borderRadius: BorderRadius.circular(kInputRadius),
-);
-
-final OutlineInputBorder kFocusedErrorBorder = OutlineInputBorder(
-  borderRadius: BorderRadius.circular(kInputRadius),
-  borderSide: const BorderSide(width: 0.5),
-);
-
-final OutlineInputBorder kDisabledBorder = OutlineInputBorder(
-  borderRadius: BorderRadius.circular(kInputRadius),
-  borderSide: const BorderSide(width: 0.2, color: Colors.black12),
-);
