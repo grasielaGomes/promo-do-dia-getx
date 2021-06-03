@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:promo_do_dia_getx/view/pages/all_pages.dart';
+import 'package:promo_do_dia_getx/view/pages/edit_credit_card_info.dart';
 import 'package:promo_do_dia_getx/view/pages/edit_personal_info.dart';
 import 'package:promo_do_dia_getx/view/pages/email_sent.dart';
 import 'package:promo_do_dia_getx/view/pages/forgot_password.dart';
@@ -42,6 +43,7 @@ class PromoDoDia extends StatelessWidget {
         GetPage(name: '/all-pages', page: () => AllPages()),
         GetPage(name: '/products', page: () => Products()),
         GetPage(name: '/edit-personal-info', page: () => EditPersonalInfo()),
+        GetPage(name: '/edit-credit-info', page: () => EditCreditCardInfo()),
       ],
     );
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:promo_do_dia_getx/models/credit_card_model.dart';
 import 'package:promo_do_dia_getx/view/components/commons/instruction_text.dart';
 import 'package:promo_do_dia_getx/view/components/commons/body_text.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,28 +9,22 @@ import 'package:promo_do_dia_getx/view/utils/constants.dart';
 import 'package:promo_do_dia_getx/view/utils/responsive.dart';
 
 class CreditCard extends StatelessWidget {
-  final String number;
-  final String name;
-  final String date;
-  final IconData icon;
+  final CreditCardModel creditCard;
 
   const CreditCard(
-      {required this.number,
-      required this.name,
-      required this.date,
-      required this.icon});
+      {required this.creditCard});
 
   @override
   Widget build(BuildContext context) {
     final Responsive _responsive = Responsive();
+    final int length = creditCard.number.length;
     return RoundedContainer(
         color: kGrey,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(height: _responsive.heightPercent(2)),
-            Text(
-              number,
+            Text(creditCard.number.replaceRange(5, length - 4, '******** '),
               style: GoogleFonts.bitter(
                   letterSpacing: 2.5,
                   textStyle: TextStyle(
@@ -45,16 +41,18 @@ class CreditCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       InstructionText(
-                        text: name,
+                        text: creditCard.cardHolder,
                         color: kLightPrimaryColor,
                         textAlign: TextAlign.start),
                       BodyText(
-                          text: date,
+                          text: creditCard.expirationDate,
                           color: kLightPrimaryColor,
                           textAlign: TextAlign.start)
                     ],
                   ),
-                  Icon(icon,
+                  Icon(creditCard.number[0] == '4'
+                      ? FontAwesomeIcons.ccVisa
+                      : creditCard.cardType(creditCard.number),
                       color: kLightPrimaryColor,
                       size: _responsive.inchPercent(5)),
                 ],

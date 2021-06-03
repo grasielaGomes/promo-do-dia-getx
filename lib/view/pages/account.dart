@@ -9,6 +9,7 @@ import 'package:promo_do_dia_getx/view/components/commons/body_text.dart';
 import 'package:promo_do_dia_getx/view/components/commons/content_container.dart';
 import 'package:promo_do_dia_getx/view/components/commons/credit_card.dart';
 import 'package:promo_do_dia_getx/view/components/commons/custom_app_bar.dart';
+import 'package:promo_do_dia_getx/view/components/commons/custom_dialog.dart';
 import 'package:promo_do_dia_getx/view/components/commons/rounded_container.dart';
 import 'package:promo_do_dia_getx/view/utils/constants.dart';
 
@@ -44,13 +45,8 @@ class Account extends StatelessWidget {
                               ],
                             )),
                         InfoHeader(title: 'payment_info'.tr,
-                            onTap: (){}),
-                        const CreditCard(
-                          number: '2345 **** **** 7892',
-                          name: 'grasiela g da silva',
-                          date: '01/27',
-                          icon: FontAwesomeIcons.ccVisa,
-                        ),
+                            onTap: () => _.goToCreditCardInfo()),
+                        CreditCard(creditCard: _.creditCard),
                         RoundedContainer(
                             onTap: (){},
                             child: Row(
@@ -61,7 +57,7 @@ class Account extends StatelessWidget {
                               ],
                         )),
                         RoundedContainer(
-                            onTap: (){},
+                            onTap: () => Get.dialog(CustomDialog()),
                             child: Row(
                               children: [
                                 const Icon(Icons.delete_rounded, color: kPrimaryColor,),

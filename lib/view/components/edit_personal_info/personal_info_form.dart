@@ -35,7 +35,6 @@ class PersonalInfoForm extends StatelessWidget {
                     Flexible(
                       child: OutputField(
                         label: 'number',
-                        enable: !_.isLoading,
                         initialValue: _.values[1],
                         validator: (value){},
                       ),
@@ -61,6 +60,7 @@ class PersonalInfoForm extends StatelessWidget {
                       flex: 2,
                       child: OutputField(
                         label: 'city',
+                        enable: !_.isLoading,
                         initialValue: _.values[4],
                         validator: (value){},
                       ),
@@ -69,6 +69,7 @@ class PersonalInfoForm extends StatelessWidget {
                     Flexible(
                       child: OutputField(
                         label: 'state',
+                        enable: !_.isLoading,
                         initialValue: _.values[5],
                         validator: (value){},
                       ),
